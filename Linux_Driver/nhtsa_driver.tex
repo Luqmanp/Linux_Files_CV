@@ -1,0 +1,25 @@
+ \documentclass[12pt]{article}
+ %File creation date: 04/06/17  at 21:18
+ \usepackage{pstricks,pst-node,pst-tree}
+ \usepackage{geometry}
+ %\usepackage{lscape}
+ \pagestyle{empty}
+ \begin{document}
+ %\begin{landscape}
+ \begin{center}
+\psset{linecolor=black,tnsep=1pt,tndepth=0cm,tnheight=0cm,treesep=.8cm,levelsep=61pt,radius=10pt}
+%     \def\psedge#1#2{\ncangle{#2}{#1}}
+ \Tcircle[fillcolor=green,fillstyle=solid]{ 1 }~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=r]{\shortstack[r]{2686\\249}}
+ \end{center}
+GUIDE  0.00-SE classification tree for predicting \texttt{\detokenize{HIC2}} using
+ estimated priors
+ and unit misclassification costs.
+Pruned tree has no splits.
+Predicted classes (based on estimated misclassification cost)
+printed below terminal nodes;
+ sample sizes for \texttt{\detokenize{HIC2}} =
+ \texttt{\detokenize{0}} and \texttt{\detokenize{1}}, respectively, beside nodes.
+Best split variable is \texttt{\detokenize{COLMEC}}.
+ %\end{landscape}
+ \end{document}

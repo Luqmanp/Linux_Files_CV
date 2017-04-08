@@ -1,0 +1,194 @@
+             GGG   U   U  I  DDDD   EEEE
+            G   G  U   U  I  D   D  E
+            G      U   U  I  D   D  E
+            G  GG  U   U  I  D   D  EEE
+            G   G  U   U  I  D   D  E
+            G   G  U   U  I  D   D  E
+             GGG    UUU   I  DDDD   EEEE
+   
+ GUIDE Classification and Regression Trees and Forests
+ Compiled with Intel Fortran 15.0.1 on Red Hat Enterprise Linux Server 6.8
+ Version 24.9 (Build date: March 28, 2017)         
+ Copyright (c) 1997-2017 Wei-Yin Loh. All rights reserved.
+ This software is based upon work supported by the U.S. Army Research Office,
+ the National Science Foundation and the National Institutes of Health.
+  
+ This job was started on: 04/05/17 at 01:38
+  
+ Random forest of classification trees
+ with random division of missing values
+ No pruning
+ Data description file: merged_driver.dsc
+ Training sample file: merged_nhtsa_driver.txt
+ Missing value code: NA
+ Records in data file start on line 2
+ Warning: N variables changed to S
+ Dependent variable is HIC2
+ Number of records in data file: 3276
+ Length of longest data entry: 19
+ Missing values found among categorical variables
+ Separate categories will be created for missing categorical variables
+ Number of classes: 2
+ Class      #Cases    Proportion
+ 0            2686    0.91516184
+ 1             249    0.08483816
+  
+ Summary information (without x variables)
+ d=dependent, b=split and fit cat variable using 0-1 dummies,
+ c=split-only categorical, n=split and fit numerical, f=fit-only numerical,
+ s=split-only numerical, w=weight
+  Column  Name            Minimum      Maximum   #Categories       #Missing
+       2  BARRIG     c                                     3
+       3  BARSHP     c                                    21
+       4  BARANG     s  -3.0000E+01   9.0000E+01                         14
+       5  BARDIA     s  -1.0000E+01   1.0000E+03                       1237
+       6  OCCTYP     c                                    13
+       7  OCCAGE     s   0.0000E+00   9.9000E+01                       1242
+       8  OCCSEX     c                                     4
+       9  OCCHT      s   0.0000E+00   1.7500E+02                       1766
+      10  OCCWT      s   0.0000E+00   8.3000E+01                       1765
+      11  DUMSIZ     c                                     7
+      12  HH         s   0.0000E+00   4.3210E+03                         89
+      13  HW         s   0.0000E+00   6.3550E+03                         68
+      14  HR         s  -1.0000E+01   2.8010E+03                        112
+      15  HS         s   0.0000E+00   3.0510E+03                        118
+      16  CD         s   0.0000E+00   5.8570E+03                        364
+      17  CS         s   0.0000E+00   4.0770E+03                         89
+      18  AD         s  -7.0000E+01   7.6250E+03                        111
+      19  HD         s  -1.0000E+01   1.0000E+03                        116
+      20  KD         s  -1.0000E+01   3.1500E+02                         70
+      21  HB         s  -1.0000E+01   1.0000E+03                       1310
+      22  NB         s  -1.0000E+01   1.0000E+03                       1313
+      23  CB         s  -1.0000E+01   1.0000E+03                       1313
+      24  KB         s  -1.0000E+01   1.0000E+03                       1315
+      25  SEPOSN     c                                     5             81
+      26  CTRL2      c                                     6             81
+      28  TSTCFN     c                                     6
+      29  TKSURF     c                                     5             80
+      30  TKCOND     c                                     6             80
+      31  TEMP       s  -1.8000E+01   7.0000E+01                         23
+      32  RECTYP     c                                     6             79
+      33  CLSSPD     s   0.0000E+00   9.9100E+01
+      34  IMPANG     s  -9.0000E+01   1.8000E+02                          4
+      35  OFFSET     s  -1.0540E+03   9.0000E+02                        459
+      36  IMPPNT     s  -6.9000E+02   1.7390E+03                       1693
+      37  MAKED      c                                    71
+      38  MODELD     c                                   641
+      39  BODY       c                                    19              1
+      40  ENGINE     c                                    18              3
+      41  ENGDSP     s   0.0000E+00   9.9900E+01                         24
+      42  TRANSM     c                                     9              6
+      43  VEHTWT     s   0.0000E+00   2.3420E+04                          4
+      44  CURBWT     s   9.6400E+02   3.0960E+03                       2854
+      45  WHLBAS     s   0.0000E+00   1.0000E+04                         30
+      46  VEHLEN     s   0.0000E+00   1.1250E+04                          6
+      47  VEHWID     s  -1.0000E+01   5.8350E+03                         90
+      48  VEHCG      s   0.0000E+00   3.4350E+03                         78
+      49  STRSEP     c                                     3            631
+      50  COLMEC     c                                     9            248
+      51  MODIND     c                                     4             80
+      52  BX1        s   0.0000E+00   2.5397E+04                        259
+      53  BX2        s   0.0000E+00   1.0732E+04                        288
+      54  BX3        s   0.0000E+00   1.0001E+05                        289
+      55  BX4        s   0.0000E+00   9.5000E+03                        288
+      56  BX5        s   0.0000E+00   7.7640E+03                        288
+      57  BX6        s   0.0000E+00   9.4870E+03                        287
+      58  BX7        s   0.0000E+00   7.6130E+03                        287
+      59  BX8        s   0.0000E+00   8.5830E+03                        287
+      60  BX9        s   0.0000E+00   7.6770E+03                        287
+      61  BX10       s   0.0000E+00   8.5800E+03                        286
+      62  BX11       s   0.0000E+00   7.5380E+03                        287
+      63  BX12       s   0.0000E+00   9.4690E+03                        286
+      64  BX13       s   0.0000E+00   9.4690E+03                        286
+      65  BX14       s   0.0000E+00   4.0001E+04                        286
+      66  BX15       s   0.0000E+00   9.9110E+03                        289
+      67  BX16       s   0.0000E+00   9.2790E+03                        287
+      68  BX17       s   0.0000E+00   1.0846E+04                        287
+      69  BX18       s   0.0000E+00   1.0831E+04                        288
+      70  BX19       s   0.0000E+00   4.2304E+04                        264
+      71  BX20       s   0.0000E+00   1.0881E+04                        264
+      72  BX21       s   0.0000E+00   1.0846E+04                        291
+      73  VEHSPD     s   0.0000E+00   9.9100E+01                          1
+      74  CRBANG     s  -1.6000E+02   1.5000E+02                         24
+      75  PDOF       s  -9.0000E+01   1.8000E+02                         23
+      76  CARANG     s   0.0000E+00   9.9000E+01                        991
+      77  VEHOR      s   0.0000E+00   9.0000E+01                        995
+      78  RST3PT     c                                     2
+      79  RST5PT     c                                     1
+      80  RSTABG     c                                     3
+      81  RSTABT     c                                     1
+      82  RSTBSS     c                                     1
+      83  RSTCSF     c                                     2
+      84  RSTCSR     c                                     1
+      85  RSTCUR     c                                     3
+      86  RSTDPL     c                                     2
+      87  RSTFCA     c                                     2
+      88  RSTFRT     c                                     3
+      89  RSTFSS     c                                     1
+      90  RSTHDT     c                                     2
+      91  RSTISS     c                                     1
+      92  RSTKNE     c                                     2
+      93  RSTLAP     c                                     2
+      94  RSTNAP     c                                     2
+      95  RSTNON     c                                     3
+      96  RSTOT      c                                     1
+      97  RSTOTH     c                                     2
+      98  RSTPEL     c                                     2
+      99  RSTPS2     c                                     2
+     100  RSTPS3     c                                     2
+     101  RSTSBK     c                                     1
+     102  RSTSCE     c                                     2
+     103  RSTSHE     c                                     1
+     104  RSTSPA     c                                     2
+     105  RSTSWE     c                                     2
+     106  RSTSWN     c                                     2
+     107  RSTTAP     c                                     3
+     108  RSTTOR     c                                     2
+     109  RSTUNK     c                                     3
+     110  RSTVES     c                                     1
+     111  HIC2       d                                     2
+     113  wt         w   0.0000E+00   1.0000E+00
+  
+      Total  #cases w/   #missing
+     #cases    miss. D  ord. vals   #X-var   #N-var   #F-var   #S-var   #B-var   #C-var
+       3276          0       2857        3        0        0       56        0       52
+ No. cases used for training: 2935
+ No. cases excluded due to 0 weight or missing D: 341
+  
+ Univariate split highest priority
+ No interaction and linear splits
+ Number of trees in ensemble: 500
+ Number of variables used for splitting: 37
+ Simple node models
+ Estimated priors
+ Unit misclassification costs
+ Fraction of cases used for splitting each node:  0.34072E-01
+ Max. number of split levels: 12
+ Min. node sample size: 14
+ Mean number of terminal nodes:    46.81    
+ 
+ Classification matrix for training sample:
+ Predicted       True class
+class              0         1
+ 0               2661       212
+ 1                 25        37
+ Total           2686       249
+ 
+ Number of cases used for tree construction: 2935
+ Number misclassified: 237
+ Resubstitution est. of mean misclassification cost:   0.8075E-01
+ 
+ 
+ Classification matrix for test sample:
+ Predicted      True class
+class              0         1
+ 0                310        21
+ 1                  3         7
+ Total            313        28
+ 
+ Number of test cases with 0 weight and nonmissing responses: 341
+ Number misclassified among them: 24
+ Test-sample estimate of mean misclassification cost:   0.7038E-01
+ 
+ Predicted class probability estimates are stored in merged_nhtsa_driver_forest.fit
+ Elapsed time in seconds:    62.69200    

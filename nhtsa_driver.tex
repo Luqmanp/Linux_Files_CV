@@ -1,0 +1,44 @@
+ \documentclass[12pt]{article}
+ %File creation date: 04/04/17  at 23:33
+ \usepackage{pstricks,pst-node,pst-tree}
+ \usepackage{geometry}
+ %\usepackage{lscape}
+ \pagestyle{empty}
+ \begin{document}
+ %\begin{landscape}
+ \begin{center}
+\psset{linecolor=black,tnsep=1pt,tndepth=0cm,tnheight=0cm,treesep=.8cm,levelsep=61pt,radius=10pt}
+%     \def\psedge#1#2{\ncangle{#2}{#1}}
+  \pstree[treemode=D]{\Tcircle{ 1 }~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{COLMEC}}\\in $S_{1}$}}}{
+  \pstree[treemode=D]{\Tcircle{ 2 }~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{TSTCFN}}\\= \texttt{\detokenize{SLB}}}}}{
+ \Tcircle[fillcolor=red,fillstyle=solid]{ 4 }~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=l]{\shortstack[r]{3\\10}}
+  \pstree[treemode=D]{\Tcircle{ 5 }~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{MODELD}}\\in $S_{2}$}}}{
+ \Tcircle[fillcolor=red,fillstyle=solid]{\small 10}~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=l]{\shortstack[r]{188\\47}}
+ \Tcircle[fillcolor=green,fillstyle=solid]{\small 11}~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=r]{\shortstack[r]{1718\\2}}
+   }
+   }
+ \Tcircle[fillcolor=red,fillstyle=solid]{ 3 }~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=r]{\shortstack[r]{368\\150}}
+ }
+ \end{center}
+GUIDE  0.50-SE classification tree for predicting \texttt{\detokenize{HIC2}} using
+ equal priors
+ and unit misclassification costs.
+At each split, an observation goes to the left branch 
+ if and only if the condition is satisfied.
+Set $S_{1}$ = \{BWU, NA, NAP, UNK\}.
+Set $S_{2}$ = \{ACHIEVA, AEROSTAR, ASTRO, BEAUVILLE, BLAZER, BROUGHAM, CAPRICE,
+ CARAVAN, CENTURY, CORSICA, DE VILLE, DURANGO, ELANTRA, EX35, EXPLORER,
+ GRAND AM, INTRIGUE, LUMINA, METRO, RAM, RANGER, RAV4, REGAL, S-10, S10 BLAZER,
+ SEDONA, SIDEKICK, SILVERADO, SL2, SPACECAB, SPORTAGE, SPORTVAN, TACOMA,
+ TRAILBLAZER, TRANS SPORT, TROOPER II, VIGOR, VUE, XT\}.
+Predicted classes (based on estimated misclassification cost)
+printed below terminal nodes;
+ sample sizes for \texttt{\detokenize{HIC2}} =
+ \texttt{\detokenize{0}} and \texttt{\detokenize{1}}, respectively, beside nodes.
+Second best split variable at root node is \texttt{\detokenize{RSTDPL}}.
+ %\end{landscape}
+ \end{document}

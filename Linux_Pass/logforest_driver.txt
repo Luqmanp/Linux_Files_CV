@@ -1,0 +1,145 @@
+ GUIDE Classification and Regression Trees and Forests
+ Version 24.9 (Build date: March 28, 2017)         
+ Compiled with Intel Fortran 15.0.1 on Red Hat Enterprise Linux Server 6.8
+ Copyright (c) 1997-2017 Wei-Yin Loh. All rights reserved.
+ This software is based upon work supported by the U.S. Army Research Office,
+ the National Science Foundation and the National Institutes of Health.
+  
+ Choose one of the following options:
+ 0. Read the warranty disclaimer
+ 1. Create an input file for model fitting or importance scoring (recommended)
+ 2. Convert data to other formats without creating input file
+ Input your choice:  Batch run with input file 
+ Input 1 for model fitting, 2 for importance or DIF scoring, 3 for data conversion: 1
+ Output file is merged_nhtsa_driver_forest.out
+  
+ Input 1 for single tree, 2 for ensemble of trees: 2
+ Input 1 for bagging, 2 for rforest: 2
+ Input 1 for random division of missing values, 2 otherwise: 1
+ Input 1 for classification, 2 for regression, 3 for propensity score grouping
+ (propensity score grouping is an experimental option)
+ Input your choice: 1
+ Input 1 for interaction tests, 2 to skip them: 2
+  
+ Input name of data description file (max 100 characters);
+ enclose with matching quotes if it has spaces: merged_driver.dsc
+ Reading data description file ...
+ Training sample file: merged_nhtsa_driver.txt
+ Missing value code: NA
+ Records in data file start on line 2
+ Warning: N variables changed to S
+ Dependent variable is HIC2
+ Reading data file ...
+ Number of records in data file: 3276
+ Length of longest data entry: 19
+ Checking for missing values ...
+ Total number of cases: 3276
+ Missing values found among categorical variables
+ Separate categories will be created for missing categorical variables
+ Number of classes: 2
+ Col. no. Categorical variable    #levels    #missing values
+        2 BARRIG                        3                  0
+        3 BARSHP                       21                  0
+        6 OCCTYP                       13                  0
+        8 OCCSEX                        4                  0
+       11 DUMSIZ                        7                  0
+       25 SEPOSN                        5                 81
+       26 CTRL2                         6                 81
+       28 TSTCFN                        6                  0
+       29 TKSURF                        5                 80
+       30 TKCOND                        6                 80
+       32 RECTYP                        6                 79
+       37 MAKED                        71                  0
+       38 MODELD                      641                  0
+       39 BODY                         19                  1
+       40 ENGINE                       18                  3
+       42 TRANSM                        9                  6
+       49 STRSEP                        3                631
+       50 COLMEC                        9                248
+       51 MODIND                        4                 80
+       78 RST3PT                        2                  0
+       79 RST5PT                        1                  0
+       80 RSTABG                        3                  0
+       81 RSTABT                        1                  0
+       82 RSTBSS                        1                  0
+       83 RSTCSF                        2                  0
+       84 RSTCSR                        1                  0
+       85 RSTCUR                        3                  0
+       86 RSTDPL                        2                  0
+       87 RSTFCA                        2                  0
+       88 RSTFRT                        3                  0
+       89 RSTFSS                        1                  0
+       90 RSTHDT                        2                  0
+       91 RSTISS                        1                  0
+       92 RSTKNE                        2                  0
+       93 RSTLAP                        2                  0
+       94 RSTNAP                        2                  0
+       95 RSTNON                        3                  0
+       96 RSTOT                         1                  0
+       97 RSTOTH                        2                  0
+       98 RSTPEL                        2                  0
+       99 RSTPS2                        2                  0
+      100 RSTPS3                        2                  0
+      101 RSTSBK                        1                  0
+      102 RSTSCE                        2                  0
+      103 RSTSHE                        1                  0
+      104 RSTSPA                        2                  0
+      105 RSTSWE                        2                  0
+      106 RSTSWN                        2                  0
+      107 RSTTAP                        3                  0
+      108 RSTTOR                        2                  0
+      109 RSTUNK                        3                  0
+      110 RSTVES                        1                  0
+ Re-checking data ...
+ Allocating missing value information
+ Assigning codes to categorical and missing values
+ Data checks complete
+ Creating missing value indicators
+ Rereading data
+ Class      #Cases    Proportion
+ 0            2676    0.91455913
+ 1             250    0.08544087
+      Total  #cases w/   #missing
+     #cases    miss. D  ord. vals   #X-var   #N-var   #F-var   #S-var   #B-var   #C-var
+       3276          0       2857        3        0        0       56        0       52
+ No. cases used for training: 2926
+ No. cases excluded due to 0 weight or missing D: 350
+ Finished reading data file
+ Univariate split highest priority
+ No interaction and linear splits
+ Default number of trees:          500
+ Input 1 to accept the default, 2 to change it: 1
+ Default number of variables used for splitting: 37
+ Input 1 to accept the default, 2 to change it: 1
+ Choose 1 for estimated priors, 2 for equal priors, 3 for priors from a file
+ Input 1, 2, or 3: 1
+ Choose 1 for unit misclassification costs, 2 to input costs from a file
+ Input 1 or 2: 1
+ Choose a split point selection method for numerical variables:
+ Choose 1 to use faster method based on sample quantiles
+ Choose 2 to use exhaustive search
+ Input 1 or 2: 1
+ Choose fraction of cases for splitting
+ Larger values give more splits: 0 = median split and 1 = all possible splits
+ Default fraction is  0.34176E-01
+ Choose 1 to accept default split fraction, 2 to change it
+ Input 1 or 2: 1
+ Max. number of split levels: 12
+ Input 1 for default min. node size,
+ 2 to specify min. value: 1
+ Input name of file to store predicted class and probability: merged_nhtsa_driver_forest.fit
+ Warning: probability estimate file is overwritten
+ Constructing the trees ...
+ Finished 50 trees
+ Finished 100 trees
+ Finished 150 trees
+ Finished 200 trees
+ Finished 250 trees
+ Finished 300 trees
+ Finished 350 trees
+ Finished 400 trees
+ Finished 450 trees
+ Finished 500 trees
+ Results are stored in merged_nhtsa_driver_forest.out
+ Predicted class probability estimates are stored in merged_nhtsa_driver_forest.fit
+ Elapsed time in seconds:    63.14000    

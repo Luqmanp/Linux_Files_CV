@@ -1,0 +1,56 @@
+ \documentclass{article}
+ %File creation date: 04/04/17  at 22:48
+ \usepackage{pstricks,pst-node,pst-tree}
+ \usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+ %\usepackage{lscape}
+ \pagestyle{empty}
+ \begin{document}
+ %\begin{landscape}
+ \begin{center}
+\psset{linecolor=black,tnsep=1pt,tndepth=0cm,tnheight=0cm,treesep=.8cm,levelsep=61pt,radius=10pt}
+%     \def\psedge#1#2{\ncangle{#2}{#1}}
+  \pstree[treemode=D]{\Tcircle{ 1 }~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{COLMEC}}\\in $S_{1}$}}}{
+  \pstree[treemode=D]{\Tcircle{ 2 }~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{MODELD}}\\in $S_{2}$}}}{
+ \Tcircle[fillcolor=red,fillstyle=solid]{ 4 }~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=l]{\shortstack[r]{136\\25}}
+ \Tcircle[fillcolor=green,fillstyle=solid]{ 5 }~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=r]{\shortstack[r]{1528\\1}}
+   }
+  \pstree[treemode=D]{\Tcircle{ 3 }~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{KB}}\\= NA}}}{
+  \pstree[treemode=D]{\Tcircle{ 6 }~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{BARSHP}}\\in $S_{3}$}}}{
+ \Tcircle[fillcolor=red,fillstyle=solid]{\small 12}~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=l]{\shortstack[r]{140\\50}}
+  \pstree[treemode=D]{\Tcircle{\small 13}~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{SEPOSN}}\\= \texttt{\detokenize{FW}}}}}{
+ \Tcircle[fillcolor=green,fillstyle=solid]{\small 26}~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=l]{\shortstack[r]{182\\4}}
+  \pstree[treemode=D]{\Tcircle{\small 27}~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{CLSSPD}}\\$\leq_*$55.60}}}{
+ \Tcircle[fillcolor=green,fillstyle=solid]{\small 54}~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=l]{\shortstack[r]{244\\3}}
+ \Tcircle[fillcolor=red,fillstyle=solid]{\small 55}~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=r]{\shortstack[r]{75\\17}}
+   }
+   }
+   }
+ \Tcircle[fillcolor=red,fillstyle=solid]{ 7 }~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=r]{\shortstack[r]{255\\133}}
+ }
+ }
+ \end{center}
+GUIDE  0.50-SE classification tree for predicting \texttt{\detokenize{HIC2}} using
+ equal priors
+ and unit misclassification costs.
+At each split, an observation goes to the left branch 
+ if and only if the condition is satisfied.
+ The symbol `$\leq_*$' stands for `$\leq$ or missing'.
+Set $S_{1}$ = \{BWU, NA, UNK\}.
+Set $S_{2}$ = \{ASTRO, BLAZER, CAPRICE, CARAVAN, CENTURY, DE VILLE, ELANTRA,
+ EX35, EXPLORER, GRAND AM, INTRIGUE, LEGACY, RAM, RANGER, RAV4, S-10,
+ S10 BLAZER, SILVERADO, SPORTAGE, TACOMA, TRAILBLAZER, VIGOR, VUE\}.
+Set $S_{3}$ = \{LCB, UNK\}.
+Predicted classes (based on estimated misclassification cost)
+printed below terminal nodes;
+ sample sizes for \texttt{\detokenize{HIC2}} =
+ \texttt{\detokenize{0}} and \texttt{\detokenize{1}}, respectively, beside nodes.
+Second best split variable at root node is \texttt{\detokenize{RSTDPL}}.
+ %\end{landscape}
+ \end{document}

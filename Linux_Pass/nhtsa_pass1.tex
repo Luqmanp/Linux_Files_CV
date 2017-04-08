@@ -1,0 +1,184 @@
+ \documentclass{article}
+ %File creation date: 04/06/17  at 22:52
+ \usepackage{pstricks,pst-node,pst-tree}
+ \usepackage[left=0.25in,right=0.25in,top=0.75in,bottom=0.75in]{geometry}
+ \usepackage{lscape}
+ \pagestyle{empty}
+ \begin{document}
+ \begin{landscape}
+ \begin{center} \footnotesize
+\psset{linecolor=black,tnsep=1pt,tndepth=0cm,tnheight=0cm,treesep=.5cm,levelsep=56pt,radius=6pt}
+%     \def\psedge#1#2{\ncangle{#2}{#1}}
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{COLMEC}}\\in $S_{1}$}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{MODELD}}\\in $S_{2}$}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{RSTFRT}}\\= \texttt{\detokenize{0}}}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{BARSHP}}\\= \texttt{\detokenize{LCB}}}}}{
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=l]{\shortstack[r]{2\\11}}
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=r]{\shortstack[r]{13\\0}}
+   }
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{DUMSIZ}}\\in $S_{3}$}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{BARSHP}}\\in $S_{4}$}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{HW}}\\$\leq_*$616.00}}}{
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=l]{\shortstack[r]{11\\2}}
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=r]{\shortstack[r]{13\\0}}
+   }
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=r]{\shortstack[r]{13\\0}}
+   }
+\pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{HH}}\\ \texttt{\detokenize{BX1}}}}}{
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=l]{\shortstack[r]{19\\5}}
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{HH}}\\$\leq$458.50}}}{
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=l]{\shortstack[r]{53\\1}}
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=r]{\shortstack[r]{12\\6}}
+   }
+   }
+   }
+   }
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=r]{\shortstack[r]{1528\\1}}
+   }
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{KB}}\\= NA}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{BARSHP}}\\in $S_{5}$}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{ENGDSP}}\\$\leq_*$2.25}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{TKCOND}}\\= \texttt{\detokenize{OTH}}}}}{
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=l]{\shortstack[r]{3\\10}}
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{MODELD}}\\in $S_{6}$}}}{
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=l]{\shortstack[r]{13\\0}}
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{MAKED}}\\in $S_{7}$}}}{
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=l]{\shortstack[r]{14\\0}}
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=r]{\shortstack[r]{25\\9}}
+   }
+   }
+   }
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=r]{\shortstack[r]{85\\31}}
+   }
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{SEPOSN}}\\= \texttt{\detokenize{FW}}}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{RSTFRT}}\\= \texttt{\detokenize{0}}}}}{
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=l]{\shortstack[r]{11\\2}}
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{BX8}}\\$\leq$2261.0}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{TRANSM}}\\in $S_{8}$}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{BX16}}\\$\leq_*$2798.5}}}{
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=l]{\shortstack[r]{22\\0}}
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=r]{\shortstack[r]{12\\2}}
+   }
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=r]{\shortstack[r]{65\\0}}
+   }
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=r]{\shortstack[r]{72\\0}}
+   }
+   }
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{CLSSPD}}\\$\leq_*$55.60}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{BODY}}\\= \texttt{\detokenize{VN}}}}}{
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=l]{\shortstack[r]{15\\0}}
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{BODY}}\\in $S_{9}$}}}{
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=l]{\shortstack[r]{25\\0}}
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=r]{\shortstack[r]{204\\3}}
+   }
+   }
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{MODELD}}\\in $S_{10}$}}}{
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=l]{\shortstack[r]{13\\0}}
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{MODELD}}\\in $S_{11}$}}}{
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=l]{\shortstack[r]{12\\7}}
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{MODELD}}\\in $S_{12}$}}}{
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=l]{\shortstack[r]{13\\0}}
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{TRANSM}}\\in $S_{13}$}}}{
+  \pstree[treemode=D]{\TC~[tnpos=l]{\shortstack[r]{\texttt{\detokenize{TRANSM}}\\= \texttt{\detokenize{MF}}}}}{
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=l]{\shortstack[r]{15\\3}}
+ \TC[fillcolor=green,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{0}}}}
+    ~[tnpos=r]{\shortstack[r]{15\\0}}
+   }
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=r]{\shortstack[r]{7\\7}}
+   }
+   }
+   }
+   }
+   }
+   }
+   }
+ \TC[fillcolor=red,fillstyle=solid]~{\makebox[0pt][c]{\texttt{\detokenize{1}}}}
+    ~[tnpos=r]{\shortstack[r]{255\\133}}
+ }
+ }
+ \end{center}
+GUIDE  0.00-SE classification tree for predicting \texttt{\detokenize{HIC2}} using
+ equal priors
+ and unit misclassification costs.
+At each split, an observation goes to the left branch 
+ if and only if the condition is satisfied.
+ The symbol `$\leq_*$' stands for `$\leq$ or missing'.
+For splits on categorical variables,
+ values not present in the training sample go to the right.
+Set $S_{1}$ = \{BWU, NA, UNK\}.
+Set $S_{2}$ = \{ASTRO, BLAZER, CAPRICE, CARAVAN, CENTURY, DE VILLE, ELANTRA,
+ EX35, EXPLORER, GRAND AM, INTRIGUE, LEGACY, RAM, RANGER, RAV4, S-10,
+ S10 BLAZER, SILVERADO, SPORTAGE, TACOMA, TRAILBLAZER, VIGOR, VUE\}.
+Set $S_{3}$ = \{05, 3C\}.
+Set $S_{4}$ = \{134, EOL, LCB, OTH\}.
+Set $S_{5}$ = \{LCB, UNK\}.
+Set $S_{6}$ = \{CIVIC, DEFORMABLE IMPACTOR, GALANT, GL, LEGACY, MIRAGE, SL1,
+ STYLUS\}.
+Set $S_{7}$ = \{ACURA, HONDA, MAZDA, MERCEDES\}.
+Set $S_{8}$ = \{AF, AR\}.
+Set $S_{9}$ = \{PU, SW, UV\}.
+Set $S_{10}$ = \{740 GLE, 80, 9000, 929, CHEROKEE, CORSICA, EXCEL GLS, LEGEND,
+ LEMANS, LESABRE, MIATA, TERCEL, VAN\}.
+Set $S_{11}$ = \{FIREBIRD, HHR, HIGHLANDER, HORIZON, HR-V, HS250h, I-MARK, ILX,
+ ILX HYBRID, IMPALA, IMPERIAL, IMPREZA, IMPULSE, IMiEV, INSIGHT, INTEGRA,
+ INTREPID, INTRIGUE, ION, IS250, IS300, J30, JETTA, JOURNEY, JUKE, JUSTY, JX,
+ K1500 PICKUP, K20 PICKUP, K2500 PICKUP, KING CAB PICKUP, KIZASHI, L200,
+ LACROSSE, LANCER, LAND CRUISER, LASER, LE BARON, LE CAR, LEAF, LEGANZA,
+ LEGEND, LEMANS, LEOPARD, LESABRE, LHS, LIBERTY, LR3, LS, LTD, LUCERNE, LUMINA,
+ LUV, LYNX, M37, MAGNUM, MALIBU, MALIBU ECO EASSIST, MARK, MARQUIS, MATADOR,
+ MATRIX, MAZDA3, MAZDA5, MAZDA6, MDX, MEGANE, MERKUR, METRO, MIATA, MIGHTY MAX,
+ MILLENIA, MIRADA, MKC, MKS, MKT, ML320, ML350, MODEL S, MONARCH, MONTANA,
+ MONTE CARLO, MONTERO, MONTERO SPORT, MONZA, MOTOR HOME, MPV, MR2, MURANO,
+ MUSTANG, MX3, MX5, MX6, MYSTIQUE, NAVIGATOR, NEON, NEW YORKER, NEWPORT, NITRO,
+ NOVA, NUBIRA, NX200t, ODYSSEY, OMEGA, OMNI, OPTIMA, OTHER, OUTBACK, OUTLANDER,
+ OUTLANDER SPORT, OUTLOOK, PACIFICA, PARISIENNE, PARK AVENUE, PASEO, PASSAT,
+ PATHFINDER, PATRIOT, PILOT, PRECIS, PRELUDE, PREMIER, PREVIA, PRIUS, PRIUS C,
+ PRIUS PLUG-IN, PRIUS V, PRIZM, PROBE, PT CRUISER, PULSAR, PUP, Q5, Q50, Q7,
+ QUANTUM, QUEST, RABBIT, RAM, RAM 150, RAM 250 VAN, RAM WAGON VAN, RAM1500,
+ RAMPAGE, RANGE ROVER SPORT, RANGER, RAV4, RDX, REGAL EASSIST, RELIANT, S80,
+ SAMURAI, ST. REGIS, STARLET, STEALTH, STORM, STRADA, STRATUS, STS, STYLUS,
+ SUBURBAN, SUMMIT, SUNBIRD, SUNDANCE, SUNFIRE, SWIFT, SX4, T100, T1000, TACOMA,
+ TAHOE, TEMPO, TERCEL, THUNDERBIRD, TIBURON, TIGUAN, TITAN, TL, TOPAZ, TORINO,
+ TORONADO, TOUAREG, TOWN AND COUNTRY, TOWN CAR, TRACKER, TRAILBLAZER,
+ TRAILBLAZER EXT, TRANSIT CONNECT, TRANSIT VAN, TRAVERSE, TREDIA, TREKKER,
+ TRIBECA, TROOPER II, TROPICA, TSX, TUCSON, TUNDRA, TUNDRA DOUBLE CAB, TURBO Z,
+ UPLANDER, V70, VAMOS L, VAN, VANAGON, VANDURA, VEGA, VELOSTER, VENTURE, VENZA,
+ VERACRUZ, VERANO, VERONA, VERSA, VERSA NOTE, VIGOR, VILLAGER, VISION, VITARA,
+ VITZ, VOLARE, VOLT, VUE, WAGON, WAGON R, WINDSTAR\}.
+Set $S_{12}$ = \{100, AMIGO, BERETTA, CALAIS, CAMRY, CAVALIER, CELICA, RX,
+ SABLE, SHADOW, SONATA, STANZA, STARION\}.
+Set $S_{13}$ = \{AF, MF\}.
+Predicted classes (based on estimated misclassification cost)
+printed below terminal nodes;
+ sample sizes for \texttt{\detokenize{HIC2}} =
+ \texttt{\detokenize{0}} and \texttt{\detokenize{1}}, respectively, beside nodes.
+Second best split variable at root node is \texttt{\detokenize{RSTDPL}}.
+ \end{landscape}
+ \end{document}

@@ -1,0 +1,25 @@
+ GUIDE Classification and Regression Trees and Forests
+ Version 24.9 (Build date: March 28, 2017)         
+ Compiled with NAG Fortran 6.1 on Mac OS X Sierra 10.12.3
+ Copyright (c) 1997-2017 Wei-Yin Loh. All rights reserved.
+ This software is based upon work supported by the U.S. Army Research Office,
+ the National Science Foundation and the National Institutes of Health.
+  
+ Choose one of the following options:
+ 0. Read the warranty disclaimer
+ 1. Create an input file for model fitting or importance scoring (recommended)
+ 2. Convert data to other formats without creating input file
+ Input your choice:  Batch run with input file 
+ Input 1 for model fitting, 2 for importance or DIF scoring, 3 for data conversion: 1
+ Output file is merged_nhtsa_driver_forest.out
+  
+ Input 1 for single tree, 2 for ensemble of trees: 2
+ Input 1 for bagging, 2 for rforest: 2
+ Input 1 for random division of missing values, 2 otherwise: 1
+ Input 1 for classification, 2 for regression, 3 for propensity score grouping
+ (propensity score grouping is an experimental option)
+ Input your choice: 1
+ Input 1 for interaction tests, 2 to skip them: 1
+  
+ Input name of data description file (max 100 characters);
+ enclose with matching quotes if it has spaces:  Description file 1 does not exist
